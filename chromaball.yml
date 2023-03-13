@@ -1,0 +1,6 @@
+name: chromaball
+dependencies:
+  - numpy
+  - matplotlib
+  - pip
+  

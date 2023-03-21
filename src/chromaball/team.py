@@ -34,7 +34,8 @@ class Team:
 
         return contrast
 
-    def pearson_correlation(self, x, y):
+    def pearson_correlation(self, x=None, y=None):
+        if x == None
         x_diff = x - np.mean(x)
         y_diff = y - np.mean(y)
 

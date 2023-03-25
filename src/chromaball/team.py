@@ -1,7 +1,8 @@
 import numpy as np
 
 class Team:
-    def __init__(self, name, color_home, tackles_home, tackles_away):
+    def __init__(self, name, color_home, tackles_home, tackles_away,
+                                    completions_home, completions_away):
         self.name = name
 
         self.color_home = color_home
@@ -10,6 +11,9 @@ class Team:
 
         self.tackles_home = tackles_home
         self.tackles_away = tackles_away
+
+        self.completions_home = completions_home
+        self.completions_away = completions_away
 
         self.throws_home = None
         self.throws_away = None
@@ -74,6 +78,11 @@ class Team:
         r = r_num / r_denom
 
         return r
+
+    def corr_stderr(r, N):
+        var = (1 - r**2) / (N - 2)
+
+        return np.sqrt(var)
 
 def main():
     pass

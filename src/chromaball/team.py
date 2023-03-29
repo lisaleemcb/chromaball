@@ -6,7 +6,7 @@ class Team:
         self.name = name
 
         self.color_home = color_home
-        self.color_away = np.array([1.,1.,1.])
+        self.color_away = np.array([1.,1.,1.]) # default for most teams
         self.color_field = np.array([96,185,34]) / 255 # So called 'Field Green'
 
         self.tackles_home = tackles_home
@@ -79,7 +79,7 @@ class Team:
 
         return r
 
-    def corr_stderr(r, N):
+    def corr_stderr(self, r, N):
         var = (1 - r**2) / (N - 2)
 
         return np.sqrt(var)
